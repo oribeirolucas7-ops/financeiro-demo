@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FinanceFlow</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <main class="app">
+    <header>
+      <h1>Finance<span>Flow</span></h1>
+      <p>Controle financeiro simples e inteligente</p>
+    </header>
+
+    <section class="dashboard">
+      <div class="card">
+        <h3>Saldo</h3>
+        <p id="balance">0.00</p>
+      </div>
+
+      <div class="card">
+        <h3>Entradas</h3>
+        <p class="income" id="income">0.00</p>
+      </div>
+
+      <div class="card">
+        <h3>Saídas</h3>
+        <p class="expense" id="expense">0.00</p>
+      </div>
+    </section>
+
+    <form id="form">
+      <input type="text" id="description" placeholder="Descrição" required />
+      <input type="number" id="amount" placeholder="Valor" step="0.01" required />
+      <select id="type">
+        <option value="income">Entrada</option>
+        <option value="expense">Saída</option>
+      </select>
+      <button type="submit">Adicionar</button>
+    </form>
+
+    <section class="list">
+      <table>
+        <thead>
+          <tr>
+            <th>Descrição</th>
+            <th>Tipo</th>
+            <th>Valor</th>
+            <th>Ação</th>
+          </tr>
+        </thead>
+        <tbody id="transactions"></tbody>
+      </table>
+    </section>
+
+    <footer>
+      © 2026 • Desenvolvido por Lucas Ribeiro
+    </footer>
+  </main>
+
+  <script src="script.js" charset="UTF-8"></script>
+</body>
+</html>
